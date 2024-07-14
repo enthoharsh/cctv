@@ -16,7 +16,7 @@ const MAX_DISPLAY = 5
 export default function Home({ posts }) {
   return (
     <>
-     <div className='h-[100vh] w-full backshadow relative' style={{backgroundImage:'url(https://themes.pixelwars.org/secury/demo-01/wp-content/uploads/sites/2/2023/09/smart-home-internet-things-with-image-smart-home-1.jpg)',backgroundPosition:'center',backgroundRepeat:'no-repeat',backgroundSize:'cover',}}>
+     <div className='h-[100vh] w-full backshadow relative backGroundZoom' style={{backgroundImage:'url(https://themes.pixelwars.org/secury/demo-01/wp-content/uploads/sites/2/2023/09/smart-home-internet-things-with-image-smart-home-1.jpg)',backgroundPosition:'center',backgroundRepeat:'no-repeat',}}>
      <div className="relative w-full h-screen text-white overflow-hidden">
       {/* Background image with overlay */}
       {/* <div className="absolute inset-0 bg-[url('/path-to-your-image.jpg')] bg-cover bg-center"> */}

@@ -191,3 +191,15 @@ input:-webkit-autofill:focus {
 .weOfferBox:hover .hoverIcons{
   bottom: 2rem;
 }
+@keyframes backgroundSizeAnimation {
+  0% {
+    background-size: 130%;
+  }
+  100% {
+    background-size: 230%;
+  }
+}
+.backGroundZoom{
+  animation: backgroundSizeAnimation infinite 15s linear;
+  animation-direction: alternate;
+}
