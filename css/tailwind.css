@@ -1,0 +1,193 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+  --button-bg: linear-gradient(16deg, #3243f7 0%, #32a4f7 100%);
+  --button-box-shadow:rgb(0 73 255 / 32%) -1px 11px 26px 4px;
+  --button-hover-bg:linear-gradient(16deg,#32a4f7 0%, #3243f7  100%);
+  --glow-color: #3b82f6;
+  --glow-shadow-color: 0 0 0px #0067ff, 0 0 1px #005dff, 0 0 8px #00d1ff;
+  --glow-spread-color: #2563eb;
+  --enhanced-glow-color: #2563eb;
+  --btn-readmore-color: rgb(60 129 245);;
+  --btn-readmore-color-hover: rgb(113, 163, 250);;
+}
+.task-list-item::before {
+  @apply hidden;
+}
+
+.task-list-item {
+  @apply list-none;
+}
+
+.footnotes {
+  @apply mt-12 border-t border-gray-200 pt-8 dark:border-gray-700;
+}
+
+.data-footnote-backref {
+  @apply no-underline;
+}
+
+.csl-entry {
+  @apply my-5;
+}
+
+/* https://stackoverflow.com/questions/61083813/how-to-avoid-internal-autofill-selected-style-to-be-applied */
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  transition:
+    background-color 600000s 0s,
+    color 600000s 0s;
+}
+
+.katex-display {
+  overflow: auto hidden;
+}
+
+.content-header-link {
+  opacity: 0;
+  margin-left: -24px;
+  padding-right: 4px;
+}
+
+.content-header:hover .content-header-link,
+.content-header-link:hover {
+  opacity: 1;
+}
+
+.linkicon {
+  display: inline-block;
+  vertical-align: middle;
+}
+.linkHover{
+  position: relative;
+}
+.linkHover:hover::before{
+  height: calc(100% + 15px); 
+  top: 0;
+  bottom: auto;
+}
+.linkHover::before{
+  /* height: calc(100% + 15px); */
+  /* top: 0; */
+  /* bottom: auto; */
+  background-color: #fcf1e5;
+  border-color: #fcf1e5;
+  clip-path: polygon(100% 0, 100% 100%, 0 calc(100% - 15px), 0 0);
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 0;
+  transition: height .3s;
+  z-index: -1;
+}
+.new-header-css{
+  /* position: absolute; */
+  z-index: 2;
+  width: 100%;
+  padding: 2rem;
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+.backshadow{
+  position: relative;
+  z-index: 0;
+}
+.backshadow::before{
+  content: '';
+  background-color:#13182C8F;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.leftCenter{
+  top: 50%;
+  /* left: 3rem; */
+  transform: translateY(-50%);
+}
+.rightCenter{
+  top: 50%;
+  /* right: 3rem; */
+  transform: translateY(-50%);
+}
+.arrowHover>span{
+  transition: all ease 0.6s;
+  top: -30%;
+}
+.arrowHover:hover>span{
+  top: 150%;
+}
+.glow-text {
+  color: var(--glow-color);
+  text-shadow: var(--glow-shadow-color);
+}
+.glow-text-noshadow {
+  color: var(--glow-color);
+}
+.strikText{
+  color: transparent;
+  -webkit-text-stroke-width: 0.5px;
+    stroke-width: 0.5px;
+    -webkit-text-stroke-color: var(--glow-color);
+    stroke: var(--glow-color);
+}
+.glow-button {
+  box-shadow: var(--button-box-shadow);
+  background-image:var(--button-bg);
+  transition: all ease 0.8s;
+  
+}
+
+.glow-button:hover {
+  transform: scale(0.9);
+  background-image:var(--button-hover-bg)
+}
+.straightLine{
+  width: 80px;
+  padding: 1px;
+  background-color: transparent;
+  background-image: linear-gradient(90deg, #02010100 0%, #3575f8 100%);
+}
+.readmoreBtn{
+  color: var(--btn-readmore-color);
+}
+.readmoreBtn:hover{
+  color: var(--btn-readmore-color-hover);
+}
+.customBackRadGradient{
+  background-image: radial-gradient(#0e1f3d 23%, #101827 67%);
+}
+.svgParent{
+  font-size: 4.4rem;
+}
+.svgChild{
+  font-size: 2.7rem;
+}
+.hoverIcons .svgParent{
+  font-size: 8.4rem;
+}
+.hoverIcons .svgChild{
+  font-size: 4.7rem;
+}
+.hoverIcons{
+  position: absolute;
+  bottom: -200px;
+  right: 2rem;
+  z-index: 0;
+  opacity: 0.1;
+  transition: all ease 0.5s;
+}
+.weOfferBox{
+  transition: all ease 0.5s;
+}
+.weOfferBox:hover{
+  transform: translateY(-20px);
+}
+.weOfferBox:hover .hoverIcons{
+  bottom: 2rem;
+}
