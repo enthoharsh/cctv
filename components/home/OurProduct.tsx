@@ -14,7 +14,7 @@ const OurProduct = () => {
           title: 'Converting Data into Intelligence', 
           image: 'https://kfkit.rometheme.pro/beyond/wp-content/uploads/sites/84/2024/06/technology-face-detection-concept-artificial-intel-YMD7NTT.jpg',
           size: 'col-span-6',
-          link:'/network-security-solution'
+          link:'/converting-data-into-intelligence'
         },
         // { 
         //   title: 'Data Encryption and Protection', 

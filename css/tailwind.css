@@ -9,8 +9,9 @@
   --glow-shadow-color: 0 0 0px #0067ff, 0 0 1px #005dff, 0 0 8px #00d1ff;
   --glow-spread-color: #2563eb;
   --enhanced-glow-color: #2563eb;
-  --btn-readmore-color: rgb(60 129 245);;
-  --btn-readmore-color-hover: rgb(113, 163, 250);;
+  --btn-readmore-color: rgb(60 129 245);
+  --btn-readmore-color-hover: rgb(113, 163, 250);
+  --text-light: rgb(219 242 255);
 }
 .task-list-item::before {
   @apply hidden;
@@ -31,7 +32,9 @@
 .csl-entry {
   @apply my-5;
 }
-
+.text-light-cust{
+  color: var(--text-light);
+}
 /* https://stackoverflow.com/questions/61083813/how-to-avoid-internal-autofill-selected-style-to-be-applied */
 input:-webkit-autofill,
 input:-webkit-autofill:focus {
