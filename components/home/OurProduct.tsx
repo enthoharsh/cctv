@@ -1,23 +1,26 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const OurProduct = () => {
     const cards = [
         { 
           title: 'Network Security Solutions', 
           image: 'https://kfkit.rometheme.pro/beyond/wp-content/uploads/sites/84/2024/06/cutting-the-wire-young-man-is-working-with-interne-ZUJJ3JD.jpg',
-          size: 'col-span-3' 
+          size: 'col-span-6',
+          link:'/network-security-solution'
         },
         { 
-          title: 'Advanced Threat Detection Systems', 
+          title: 'Converting Data into Intelligence', 
           image: 'https://kfkit.rometheme.pro/beyond/wp-content/uploads/sites/84/2024/06/technology-face-detection-concept-artificial-intel-YMD7NTT.jpg',
-          size: 'col-span-6' 
+          size: 'col-span-6',
+          link:'/network-security-solution'
         },
-        { 
-          title: 'Data Encryption and Protection', 
-          image: 'https://kfkit.rometheme.pro/beyond/wp-content/uploads/sites/84/2024/06/vertical-image-of-advanced-cybersecurity-encryptio-QQV4R95.jpg',
-          size: 'col-span-3' 
-        }
+        // { 
+        //   title: 'Data Encryption and Protection', 
+        //   image: 'https://kfkit.rometheme.pro/beyond/wp-content/uploads/sites/84/2024/06/vertical-image-of-advanced-cybersecurity-encryptio-QQV4R95.jpg',
+        //   size: 'col-span-3' 
+        // }
       ];
     
   return (
@@ -41,7 +44,8 @@ const OurProduct = () => {
       
       <div className="grid grid-cols-12 gap-6">
       {cards.map((card, index) => (
-            <div 
+            <Link 
+            href={card.link}
             key={index} 
             className={`relative overflow-hidden rounded-lg ${card.size} transition-transform duration-300 ease-in-out transform hover:-translate-y-2`}
           >
@@ -62,7 +66,7 @@ const OurProduct = () => {
                   </button>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
       </div>
     </div>
